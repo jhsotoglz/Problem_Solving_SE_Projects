@@ -1,0 +1,14 @@
+The result value of this calculation is: 8152.
+The result value of this calculation is: 27361080.
+The result value of this calculation is: 81.00.
+The result value of this calculation is: 33.73.
+The result value of this calculation is: 21.
+The result value of this calculation is: 2.
+The result value of this calculation is: 2.00.
+The result value of this calculation is: 21.00.
+The result value of this calculation is: 22.00.
+The result value of this calculation is: 2.
+The result value of this calculation is: 22.00.
+The area of the cirlce is: 44.39
+14 feet is equal to 4.27 meters.
+76 defrees Fahrenheit equals 24.44 Degrees Celsius.

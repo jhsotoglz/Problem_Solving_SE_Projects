@@ -1,0 +1,116 @@
+/*----------------------------------------------------------------------------
+-		         SE 185: Lab 05 - Conditionals (What's up?)	    	         -
+-	Name:			Jesus Soto Gonzalez														 -
+- 	Section:		1														 -
+-	NetID:			jhsoto@iastate.edu													     -
+-	Date:			10/06/2022														 -
+-----------------------------------------------------------------------------*/
+
+/*----------------------------------------------------------------------------
+-								Includes									 -
+-----------------------------------------------------------------------------*/
+#include <stdio.h>
+#include <math.h>
+
+/*----------------------------------------------------------------------------
+-	                            Prototypes                                   -
+-----------------------------------------------------------------------------*/
+
+/*----------------------------------------------------------------------------
+-	                                Notes                                    -
+-----------------------------------------------------------------------------*/
+// Compile with gcc lab05.c -o lab05
+// Run with ./ds4rd.exe -d 054c:05c4 -D DS4_BT -a -g -b | ./lab05
+
+/*----------------------------------------------------------------------------
+-								Implementation								 -
+-----------------------------------------------------------------------------*/
+int close_to (double tolerance, double point, double value);
+double magnitude (double z, double x, double y);
+int triangle;
+
+
+
+int main(int argc, char *argv[])
+{
+    int triangle, circle, x_button, square, i;
+    double ax, ay, az, gx, gy, gz;
+	double point;
+	double value;
+	
+    while (1)
+    {
+        scanf("%lf, %lf, %lf, %lf, %lf, %lf, %d, %d, %d, %d",
+              &ax, &ay, &az, &gx, &gy, &gz, &triangle, &circle, &x_button, &square);
+			  
+	if (close_to(0.05, 0, magnitude(ax, az, ay))){
+		if(close_to(0.05, 1, gy)){
+			if (i !=1){
+				i = 1;
+				printf("TOP\n");
+			}
+		}
+		else if (close_to(0.05, -1, gy)){
+			if (i != 2){
+				i = 2;
+				printf("DOWN\n");
+			}
+		}
+		else if (close_to(0.05, -1, gz)){
+			if (i != 3){
+				i = 3;
+				printf("FRONT\n");
+			}
+		}
+		else if (close_to(0.05, 1, gz)){
+			if (i != 4){
+				i = 4;
+				printf("BACK\n");
+			}
+		}
+		else if (close_to(0.05, 1, gx)){
+			if (i != 5){
+				i = 5;
+				printf("LEFT\n");
+			}
+		}
+		else if (close_to(0.05, -1, gx)){
+			if (i != 6){
+				i = 6;
+				printf("RIGHT\n");
+			}
+		}
+		if (triangle == 1){
+			break;
+		}
+	}
+	}
+	return 0;
+}
+        /* printf for observing values scanned in from ds4rd.exe,
+         * be sure to comment or remove in final program */
+       // printf("Echoing output: %lf, %lf, %lf, %lf, %lf, %lf, %d, %d, %d, %d \n",
+               //ax, ay, az, gx, gy, gz, triangle, circle, x_button, square);
+
+        /* It would be wise (mainly save time) if you copy your code to calculate
+         * the magnitude from lab03-1.c. You will also need to copy your
+         * prototypes and functions to the appropriate sections in this program. */
+
+        // printf("The acceleration's current magnitude is: %lf\n", t, magnitude(ax, ay, az));
+   
+
+/* Put your functions here, and be sure to put prototypes above. */
+
+	double magnitude(double x, double y, double z){
+		return sqrt((x * x)+(y * y)+(z * z));
+	}
+	
+	int close_to (double tolerance, double point, double value){
+		if(fabs(value - point) <= tolerance){
+			return 1;
+		}
+		else{
+			return 0;
+		}
+	}
+	
